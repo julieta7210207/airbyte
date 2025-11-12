@@ -53,11 +53,9 @@ class SigV4Authenticator:
         date_stamp = t.strftime("%Y%m%d")
         parsed_url = urlparse(url)
 
-        
         canonical_uri = parsed_url.path or "/"
         canonical_querystring = parsed_url.query
 
-        
         netloc = parsed_url.netloc
         if ":" in netloc:
             netloc = netloc.split(":")[0]
@@ -257,7 +255,6 @@ class SourceAmazonGrafana(Source):
             },
         }
 
-    
         streams = [
             AirbyteStream(
                 name="users",
@@ -273,7 +270,6 @@ class SourceAmazonGrafana(Source):
             ),
         ]
 
-    
         return AirbyteCatalog(streams=streams)
 
     def streams(self, config: Mapping[str, Any]) -> List[BaseGrafanaStream]:
