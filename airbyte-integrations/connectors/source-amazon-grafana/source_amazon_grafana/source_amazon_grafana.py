@@ -257,7 +257,6 @@ class SourceAmazonGrafana(Source):
             },
         }
 
-    
         streams = [
             AirbyteStream(
                 name="users",
@@ -273,7 +272,6 @@ class SourceAmazonGrafana(Source):
             ),
         ]
 
-    
         return AirbyteCatalog(streams=streams)
 
     def streams(self, config: Mapping[str, Any]) -> List[BaseGrafanaStream]:
