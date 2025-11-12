@@ -97,7 +97,7 @@ def parse_cdk_dependency(pyproject_path) -> dict:
 
 def is_prerelease_version(version_str) -> bool:
     """Check if version string represents a standard published version.
-    
+
     Handles comma-separated version ranges like ">=6.61.6,<7.0" by validating
     each constraint separately. Returns True if any constraint is invalid or
     contains prerelease markers.
