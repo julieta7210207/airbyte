@@ -1,13 +1,7 @@
 name: Global Format Check
 # This workflow checks the formatting of the codebase using pre-commit hooks.
 
-on:
-  workflow_dispatch:
-
-  push:
-    branches:
-      - master
-  pull_request:
+on: push
 
 jobs:
   format-check:
